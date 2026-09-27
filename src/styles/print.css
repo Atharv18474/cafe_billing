@@ -1,0 +1,64 @@
+/* Thermal Printer Formatting */
+@media screen {
+  .thermal-bill-container {
+    max-width: 380px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px dashed var(--border);
+  }
+}
+
+@media print {
+  /* Hide all dashboard/POS app chrome */
+  body * {
+    visibility: hidden;
+  }
+
+  .sidebar,
+  .navbar,
+  .nav-header,
+  .btn,
+  button,
+  .no-print,
+  .modal-backdrop,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  /* Show only printable thermal receipt */
+  .printable-receipt-area,
+  .printable-receipt-area * {
+    visibility: visible;
+  }
+
+  .printable-receipt-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 80mm !important; /* Standard 80mm thermal, wraps naturally for 58mm */
+    margin: 0 !important;
+    padding: 2mm !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 11pt !important;
+    line-height: 1.25 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .printable-receipt-area.width-58mm {
+    max-width: 58mm !important;
+    font-size: 9.5pt !important;
+  }
+
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}

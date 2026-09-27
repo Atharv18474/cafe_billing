@@ -1,0 +1,42 @@
+export const USER_ROLES = {
+  OWNER: 'OWNER',
+  ADMIN: 'ADMIN',
+  WAITER: 'WAITER'
+};
+
+export const TABLE_STATUS = {
+  AVAILABLE: 'AVAILABLE',
+  OCCUPIED: 'OCCUPIED',
+  BILLING: 'BILLING',
+  PAYMENT_PENDING: 'PAYMENT_PENDING'
+};
+
+export const ORDER_STATUS = {
+  OPEN: 'OPEN',
+  BILLING: 'BILLING',
+  PAYMENT_PENDING: 'PAYMENT_PENDING',
+  PAID: 'PAID',
+  CLOSED: 'CLOSED',
+  CANCELLED: 'CANCELLED'
+};
+
+export const PAYMENT_METHOD = {
+  CASH: 'CASH',
+  ONLINE: 'ONLINE'
+};
+
+export const PAYMENT_STATUS = {
+  PENDING: 'PENDING',
+  PAID: 'PAID'
+};
+
+export const DISCOUNT_TYPE = {
+  PERCENTAGE: 'Percentage',
+  FIXED: 'Fixed Amount'
+};
+
+export const DISCOUNT_SCOPE = {
+  ORDER: 'ORDER',
+  PRODUCT: 'PRODUCT',
+  COMBO: 'COMBO'
+};
